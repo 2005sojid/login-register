@@ -15,7 +15,9 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-LOGIN_REDIRECT_URL = "users"
+STATIC_URL = 'static/'
+
+LOGIN_REDIRECT_URL = "index"
 LOGIN_URL = "login"
 
 # Quick-start development settings - unsuitable for production
@@ -33,6 +35,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'posts.apps.PostsConfig',
     'users.apps.UsersConfig',
     'crispy_forms',
     'crispy_bootstrap4',
